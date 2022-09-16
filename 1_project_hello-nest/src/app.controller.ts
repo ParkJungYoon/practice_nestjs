@@ -9,4 +9,10 @@ export class AppController {
   getHello(): string {
     return this.appService.getHello();
   }
+
+  // url 가져와서 함수로 매핑
+  @Get('/hello')
+  sayHello(): string {
+    return this.appService.getHi();
+  }
 }
